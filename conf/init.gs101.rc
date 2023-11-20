@@ -754,7 +754,7 @@ on property:sys.boot_completed=1
     write /proc/vendor_sched/sys_prefer_idle 0
     # cfs_rq clamp is using tg->uclamp setting
     # align it with the vendor_group setting
-    write /proc/vendor_sched/bg_uclamp_max 512
+    write /proc/vendor_sched/bg_uclamp_max 256
     write /dev/cpuctl/background/cpu.uclamp.max 50
     write /proc/vendor_sched/sysbg_uclamp_max 512
     write /dev/cpuctl/system-background/cpu.uclamp.max 50
@@ -786,8 +786,8 @@ on property:sys.boot_completed=1
     write /proc/vendor_sched/sf_uclamp_min 39
     write /proc/vendor_sched/sf_prefer_idle 1
 
-    # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
-    write /dev/cpuctl/background/cpu.shares 1024
+    # Setup cpu.shares to throttle background groups (bg ~ 2.5% sysbg ~ 5% dex2oat ~2.5%)
+    write /dev/cpuctl/background/cpu.shares 512
     write /dev/cpuctl/system-background/cpu.shares 1024
     write /dev/cpuctl/dex2oat/cpu.shares 512
     write /dev/cpuctl/system/cpu.shares 20480
