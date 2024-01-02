@@ -1207,3 +1207,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Call deleteAllKeys if vold detects a factory reset
 PRODUCT_VENDOR_PROPERTIES += ro.crypto.metadata_init_delete_all_keys.enabled=true
+
+# Esim
+PRODUCT_PRODUCT_PROPERTIES += persist.sys.modem.removeable_esim_as_default=true
