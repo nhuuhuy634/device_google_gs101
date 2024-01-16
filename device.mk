@@ -1210,3 +1210,6 @@ PRODUCT_VENDOR_PROPERTIES += ro.crypto.metadata_init_delete_all_keys.enabled=tru
 
 # Esim
 PRODUCT_PRODUCT_PROPERTIES += persist.sys.modem.removeable_esim_as_default=true
+
+# Memory
+PRODUCT_PRODUCT_PROPERTIES += persist.device_config.mglru_native.lru_gen_config=all
